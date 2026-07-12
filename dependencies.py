@@ -1,5 +1,9 @@
-from repositories.memory_notes_repository import MemoryNotesRepository
+import os
+
+from repositories.postgres_notes_repository import PostgresNotesRepository
 from services.notes_service import NotesService
 
-notes_repository = MemoryNotesRepository()
+database_url = os.environ["DATABASE_URL"]
+
+notes_repository = PostgresNotesRepository(database_url)
 notes_service = NotesService(notes_repository)
