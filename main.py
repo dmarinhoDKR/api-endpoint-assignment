@@ -1,14 +1,14 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 
+from dependencies import notes_service
+
 app = FastAPI(title="API Endpoint Assignment")
+
 
 class NoteCreate(BaseModel):
     title: str
     content: str
-
-
-notes = []
 
 
 @app.get("/")
@@ -22,7 +22,7 @@ def root():
 @app.get("/profile")
 def profile():
     return {
-        "name": "Daniel Figueiredo",
+        "name": "Daniel Figueredo",
         "track": "Backend AI Engineering",
         "focus": ["Python", "APIs", "Automation", "MLOps"],
     }
@@ -30,17 +30,12 @@ def profile():
 
 @app.post("/notes")
 def create_note(note: NoteCreate):
-    new_note = {
-        "id": len(notes) + 1,
-        "title": note.title,
-        "content": note.content,
-    }
-
-    notes.append(new_note)
-
-    return new_note
+    return notes_service.create_note(
+        title=note.title,
+        content=note.content,
+    )
 
 
 @app.get("/notes")
 def list_notes():
-    return notes
+    return notes_service.list_notes()

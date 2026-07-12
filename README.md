@@ -29,7 +29,7 @@ Example response:
 
 ```json
 {
-  "name": "Daniel Figueiredo",
+  "name": "Daniel Figueredo",
   "track": "Backend AI Engineering",
   "focus": ["Python", "APIs", "Automation", "MLOps"]
 }
