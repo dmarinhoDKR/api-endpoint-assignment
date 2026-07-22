@@ -1,3 +1,17 @@
+## Tech Stack
+
+![Python](https://img.shields.io/badge/Python-0F172A?style=flat-square&logo=python&logoColor=FFD43B)
+![FastAPI](https://img.shields.io/badge/FastAPI-0F172A?style=flat-square&logo=fastapi&logoColor=009688)
+![Pydantic](https://img.shields.io/badge/Pydantic-0F172A?style=flat-square&logo=pydantic&logoColor=E92063)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-0F172A?style=flat-square&logo=postgresql&logoColor=4169E1)
+![Docker Compose](https://img.shields.io/badge/Docker_Compose-0F172A?style=flat-square&logo=docker&logoColor=2496ED)
+![OpenAPI](https://img.shields.io/badge/OpenAPI-0F172A?style=flat-square&logo=openapiinitiative&logoColor=6BA539)
+
+**Backend:** Python, FastAPI, Pydantic and REST APIs  
+**Database:** PostgreSQL with repository-based persistence  
+**Environment:** Docker Compose and environment-based configuration  
+**Documentation:** Swagger/OpenAPI
+
 # API Endpoint Assignment — Containerized Stack
 
 A FastAPI backend using a layered architecture, PostgreSQL, Docker, and Docker Compose.
